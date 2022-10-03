@@ -92,6 +92,7 @@ import triangle.abstractSyntaxTrees.visitors.ArrayAggregateVisitor;
 import triangle.abstractSyntaxTrees.visitors.CommandVisitor;
 import triangle.abstractSyntaxTrees.visitors.DeclarationVisitor;
 import triangle.abstractSyntaxTrees.visitors.ExpressionVisitor;
+import triangle.abstractSyntaxTrees.commands.RepeatCommand;
 import triangle.abstractSyntaxTrees.visitors.FormalParameterSequenceVisitor;
 import triangle.abstractSyntaxTrees.visitors.IdentifierVisitor;
 import triangle.abstractSyntaxTrees.visitors.LiteralVisitor;
@@ -976,5 +977,11 @@ public final class Checker implements ActualParameterVisitor<FormalParameter, Vo
 		StdEnvironment.unequalDecl = declareStdBinaryOp("\\=", StdEnvironment.anyType, StdEnvironment.anyType,
 				StdEnvironment.booleanType);
 
+	}
+
+	@Override
+	public Void visitRepeatCommand(RepeatCommand ast, Void arg) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
